@@ -31,22 +31,6 @@ const NavIcons = () => {
     }
   };
 
-  // AUTH WITH WIX-MANAGED AUTH
-
-  // const wixClient = useWixClient();
-
-  // const login = async () => {
-  //   const loginRequestData = wixClient.auth.generateOAuthData(
-  //     "http://localhost:3000"
-  //   );
-
-  //   console.log(loginRequestData);
-
-  //   localStorage.setItem("oAuthRedirectData", JSON.stringify(loginRequestData));
-  //   const { authUrl } = await wixClient.auth.getAuthUrl(loginRequestData);
-  //   window.location.href = authUrl;
-  // };
-
   const handleLogout = async () => {
     setIsLoading(true);
     Cookies.remove("refreshToken");
@@ -81,13 +65,7 @@ const NavIcons = () => {
           </div>
         </div>
       )}
-      <Image
-        src="/notification.png"
-        alt=""
-        width={22}
-        height={22}
-        className="cursor-pointer"
-      />
+
       <div
         className="relative cursor-pointer"
         onClick={() => setIsCartOpen((prev) => !prev)}
